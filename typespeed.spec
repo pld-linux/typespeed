@@ -36,14 +36,13 @@ install -D typespeed.1 $RPM_BUILD_ROOT%{_mandir}/man1/typespeed.1
 install words.* $RPM_BUILD_ROOT%{_datadir}/typespeed/
 echo %{_datadir}/typespeed/ > $RPM_BUILD_ROOT%{_sysconfdir}/typespeedrc
 
-gzip -9nf README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man?/*
 %{_datadir}/%{name}/words.*
