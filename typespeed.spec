@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	http://www.sicom.fi/~bestis/%{name}-%{version}.tar.gz
+# Source0-md5:	0af9809cd20bd9010732ced930090f32
 URL:		http://www.sicom.fi/~bestis/typespeed.html
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
