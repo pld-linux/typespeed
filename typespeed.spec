@@ -2,7 +2,7 @@ Summary:	Program for counting typed chars
 Summary(pl):	Program do mierzenia ilo¶ci wciskanych klawiszy
 Name:		typespeed
 Version:	0.4.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Text
 Source0:	http://www.sicom.fi/~bestis/%{name}-%{version}.tar.gz
