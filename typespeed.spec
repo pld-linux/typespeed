@@ -28,12 +28,14 @@ przyjació³mi.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT/{usr/share/typespeed,etc}
+
 install -D typespeed $RPM_BUILD_ROOT%{_bindir}/typespeed
+install -D typespeed.1 $RPM_BUILD_ROOT%{_mandir}/man1/typespeed.1
+
 install words.* $RPM_BUILD_ROOT%{_datadir}/typespeed/
 echo %{_datadir}/typespeed/ > $RPM_BUILD_ROOT%{_sysconfdir}/typespeedrc
-install -D typespeed.1 $RPM_BUILD_ROOT%{_mandir}/man1/typespeed.1
+
 gzip -9nf README
 
 %clean
