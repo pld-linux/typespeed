@@ -48,5 +48,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc README
 %{_sysconfdir}/typespeedrc
 %attr(755,root,root) %{_bindir}/%{name}
+%dir %{_datadir}/%{name}
 %{_datadir}/%{name}/words.*
 %{_mandir}/man?/*
