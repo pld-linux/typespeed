@@ -23,12 +23,14 @@ przyjació³mi.
 
 %prep
 %setup -q
-
 %patch0 -p1
 
 %build
-%{__make} CC=%{__cc} CFLAGS="%{rpmcflags} -D_GNU_SOURCE -I%{_includedir}/ncurses"
-./typespeed --makescores
+%{__make} \
+	CC=%{__cc} \
+	CFLAGS="%{rpmcflags} -D_GNU_SOURCE -I%{_includedir}/ncurses"
+./typespeed \
+	--makescores
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -40,14 +42,13 @@ install -D typespeed.1 $RPM_BUILD_ROOT%{_mandir}/man1/typespeed.1
 install words.* $RPM_BUILD_ROOT%{_datadir}/typespeed/
 echo %{_datadir}/typespeed/ > $RPM_BUILD_ROOT%{_sysconfdir}/typespeedrc
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc README
-%attr(755,root,root) %{_bindir}/%{name}
-%{_mandir}/man?/*
-%{_datadir}/%{name}/words.*
 %{_sysconfdir}/typespeedrc
+%attr(755,root,root) %{_bindir}/%{name}
+%{_datadir}/%{name}/words.*
+%{_mandir}/man?/*
