@@ -2,11 +2,12 @@ Summary:	Program for counting typed chars
 Summary(pl):	Program do mierzenia ilo¶ci wciskanych klawiszy
 Name:		typespeed
 Version:	0.4.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Text
 Source0:	http://www.sicom.fi/~bestis/%{name}-%{version}.tar.gz
 # Source0-md5:	0af9809cd20bd9010732ced930090f32
+Patch0:		%{name}-buff_over_fix.patch
 URL:		http://www.sicom.fi/~bestis/typespeed.html
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -22,6 +23,8 @@ przyjació³mi.
 
 %prep
 %setup -q
+
+%patch0 -p1
 
 %build
 %{__make} CC=%{__cc} CFLAGS="%{rpmcflags} -D_GNU_SOURCE -I%{_includedir}/ncurses"
