@@ -25,8 +25,8 @@ przyjació³mi.
 
 %build
 %{__make} \
-	CC=%{__cc} \
-	CFLAGS="%{rpmcflags} -D_GNU_SOURCE -I%{_includedir}/ncurses"
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} -D_GNU_SOURCE -I/usr/include/ncurses"
 ./typespeed \
 	--makescores
 
