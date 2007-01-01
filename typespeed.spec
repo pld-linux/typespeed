@@ -1,12 +1,13 @@
 Summary:	Program for counting typed chars
 Summary(pl):	Program do mierzenia ilo¶ci wciskanych klawiszy
 Name:		typespeed
-Version:	0.5.1
+Version:	0.5.3
 Release:	1
 License:	GPL
 Group:		Applications/Text
-Source0:	http://ls.purkki.org/typespeed/%{name}-%{version}.tar.gz
-# Source0-md5:	a39a4f76c047803c0b3d295d136365f0
+Source0:	http://tobias.eyedacor.org/typespeed/%{name}-%{version}.tar.gz 
+# Source0-md5:	ee888deb405a40045297a6e5175f78e8
+Patch0:		%{name}-dirs.patch
 URL:		http://ls.purkki.org/typespeed/
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -22,6 +23,7 @@ przyjació³mi.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__make} \
