@@ -1,0 +1,23 @@
+diff -urN typespeed-0.5.3/Makefile typespeed-0.5.3.new/Makefile
+--- typespeed-0.5.3/Makefile	2006-09-09 12:07:45.000000000 +0200
++++ typespeed-0.5.3.new/Makefile	2007-01-01 18:19:09.682686197 +0100
+@@ -4,7 +4,7 @@
+ INSTALL_PROGRAM = $(INSTALL)
+ LDFLAGS = -lncurses
+ 
+-prefix = /usr/local
++prefix = /usr
+ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+ datarootdir = $(prefix)/share
+diff -urN typespeed-0.5.3/pathnames.h typespeed-0.5.3.new/pathnames.h
+--- typespeed-0.5.3/pathnames.h	2006-09-09 12:07:45.000000000 +0200
++++ typespeed-0.5.3.new/pathnames.h	2007-01-01 18:12:56.612686197 +0100
+@@ -36,6 +36,6 @@
+ #define LOCALCONF ".typespeedrc"
+ 
+ #ifndef WORDDIR
+-	#define WORDDIR	"/usr/local/share/typespeed"
++	#define WORDDIR	"/usr/share/typespeed"
+ #endif
+ 
