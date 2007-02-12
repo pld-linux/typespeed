@@ -1,5 +1,5 @@
 Summary:	Program for counting typed chars
-Summary(pl):	Program do mierzenia ilo¶ci wciskanych klawiszy
+Summary(pl.UTF-8):   Program do mierzenia iloÅ›ci wciskanych klawiszy
 Name:		typespeed
 Version:	0.5.3
 Release:	1
@@ -16,10 +16,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Typespeed gives your fingers' cps (total and correct), typoratio and
 some points to compare with your friends.
 
-%description -l pl
-Typespeed podaje ilo¶æ znaków na sekundê Twoich palców, poprawno¶æ
-pisowni i kilka innych wspó³czynników do porównania siê z
-przyjació³mi.
+%description -l pl.UTF-8
+Typespeed podaje iloÅ›Ä‡ znakÃ³w na sekundÄ™ Twoich palcÃ³w, poprawnoÅ›Ä‡
+pisowni i kilka innych wspÃ³Å‚czynnikÃ³w do porÃ³wnania siÄ™ z
+przyjaciÃ³Å‚mi.
 
 %prep
 %setup -q
