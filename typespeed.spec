@@ -1,5 +1,5 @@
 Summary:	Program for counting typed chars
-Summary(pl.UTF-8):   Program do mierzenia ilości wciskanych klawiszy
+Summary(pl.UTF-8):	Program do mierzenia ilości wciskanych klawiszy
 Name:		typespeed
 Version:	0.5.3
 Release:	1
