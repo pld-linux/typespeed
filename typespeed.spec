@@ -10,6 +10,9 @@ Source0:	http://tobias.eyedacor.org/typespeed/%{name}-%{version}.tar.gz
 # Source0-md5:	578102b418c7df84903d3e90df2e7483
 Patch0:		%{name}-dirs.patch
 URL:		http://ls.purkki.org/typespeed/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	ncurses-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
