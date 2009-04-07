@@ -29,7 +29,6 @@ przyjaciółmi.
 
 %prep
 %setup -q
-# %patch0 -p1
 
 %build
 %{__libtoolize}
@@ -44,6 +43,7 @@ przyjaciółmi.
 rm -rf $RPM_BUILD_ROOT
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 %{__rm} -rf $RPM_BUILD_ROOT%{_docdir}/%{name}
+%{__mv} $RPM_BUILD_ROOT%{_datadir}/locale/fr{_FR,}
 
 %find_lang %{name}
 
@@ -52,7 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%dir %{_datadir}/locale/fr_FR/LC_MESSAGES
 %attr(755,root,root) %{_bindir}/%{name}
 %attr(1777,root,root) /var/games/typespeed.score
 %{_sysconfdir}/typespeedrc
