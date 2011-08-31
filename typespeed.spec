@@ -3,7 +3,7 @@ Summary(hu.UTF-8):	Program a gépelt karakterek számlálására
 Summary(pl.UTF-8):	Program do mierzenia ilości wciskanych klawiszy
 Name:		typespeed
 Version:	0.6.5
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Text
 Source0:	http://tobias.eyedacor.org/typespeed/%{name}-%{version}.tar.gz
