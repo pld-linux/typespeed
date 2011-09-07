@@ -3,7 +3,7 @@ Summary(hu.UTF-8):	Program a gépelt karakterek számlálására
 Summary(pl.UTF-8):	Program do mierzenia ilości wciskanych klawiszy
 Name:		typespeed
 Version:	0.6.5
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Text
 Source0:	http://tobias.eyedacor.org/typespeed/%{name}-%{version}.tar.gz
@@ -46,6 +46,7 @@ przyjaciółmi.
 rm -rf $RPM_BUILD_ROOT
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 %{__rm} -rf $RPM_BUILD_ROOT%{_docdir}/%{name}
+%{__mv} $RPM_BUILD_ROOT%{_datadir}/locale/de{_DE,}
 %{__mv} $RPM_BUILD_ROOT%{_datadir}/locale/fr{_FR,}
 
 %find_lang %{name}
